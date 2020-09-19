@@ -21,7 +21,7 @@ steps:
     publishWebProjects: true
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
+  displayName: 'Publish Build Artifacts'
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     publishLocation: 'pipeline'
-  displayName: 'Publish Build Artifacts'
